@@ -109,6 +109,7 @@ public class DocuportBasePage {
         personal.click();
         BrowserUtils.waitForVisibility(createNewUser, DocuportConstants.LARGE);
         createNewUser.click();
+
     }
 
 
