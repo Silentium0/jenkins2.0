@@ -1,4 +1,4 @@
-package loopcamp;
+package com.loop;
 
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
@@ -12,7 +12,7 @@ import org.junit.runner.RunWith;
                 "junit:target/junit/junit-report.xml",
                 "rerun:target/rerun.txt",},
         features = "src/test/resources/features",
-        publish = true,
-        tags = "@test1"
+        publish = false,
+        tags = "@DucuportValidation"
 )
 public class CukesRunner {}
