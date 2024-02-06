@@ -1,4 +1,4 @@
-package loopcamp;
+package com.loop.utilities;
 
 import java.io.FileInputStream;
 import java.util.Properties;

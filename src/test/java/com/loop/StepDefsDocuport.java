@@ -1,6 +1,7 @@
-package loopcamp;
+package com.loop;
 
-import io.cucumber.java.en.Then;
+import com.loop.utilities.ConfigurationReader;
+import com.loop.utilities.Driver;
 import io.cucumber.java.en.When;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
