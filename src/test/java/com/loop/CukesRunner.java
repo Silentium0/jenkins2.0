@@ -13,6 +13,6 @@ import org.junit.runner.RunWith;
                 "rerun:target/rerun.txt",},
         features = "src/test/resources/features",
         publish = false,
-        tags = "@test1"
+        tags = "@DucuportValidation"
 )
 public class CukesRunner {}
