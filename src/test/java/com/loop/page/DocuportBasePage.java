@@ -92,11 +92,17 @@ public class DocuportBasePage {
         return actual;
     }
 
-    public void MyUpload(String input){
-        myUpload.isDisplayed();
-    }
-    public void ReceviedDocs(String input){
-        receivDocs.isDisplayed();
+
+    public void displayed(String button){
+
+        switch (button){
+            case "My uploads":
+                myUpload.isDisplayed();
+                break;
+            case "Received docs":
+                receivDocs.isDisplayed();
+                break;
+        }
     }
 
     public void clickButton(String button){
