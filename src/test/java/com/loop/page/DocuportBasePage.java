@@ -94,10 +94,10 @@ public class DocuportBasePage {
         return actual;
     }
     public void clickOn (String input) {
-        myUploadsButton.click();
+        receivedDocsButton.click();
     }
     public void clickon (String input) {
-        receivedDocsButton.click();
+        myUploadsButton.click();
     }
 
 
@@ -109,6 +109,7 @@ public class DocuportBasePage {
         personal.click();
         BrowserUtils.waitForVisibility(createNewUser, DocuportConstants.LARGE);
         createNewUser.click();
+
     }
 
 
