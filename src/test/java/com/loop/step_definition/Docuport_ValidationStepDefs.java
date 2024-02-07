@@ -22,7 +22,7 @@ public class Docuport_ValidationStepDefs {
 
     @Then("Validate Received docs ,search button, download button  is displayed")
     public void validate_received_docs_search_button_download_button_is_displayed() {
-       // docuportLogin.receivDocs.isDisplayed();
+        docuportLogin.receivDocs.isDisplayed();
         docuportLogin.search.isDisplayed();
         docuportLogin.download.isDisplayed();
     }
@@ -34,7 +34,7 @@ public class Docuport_ValidationStepDefs {
 
     @Then("Validate My uploads, download button, search button is displayed")
     public void validate_my_uploads_download_button_search_button_is_displayed() {
-        //docuportLogin.myUpload.isDisplayed();
+        docuportLogin.myUpload.isDisplayed();
         docuportLogin.search.isDisplayed();
         docuportLogin.download.isDisplayed();
     }

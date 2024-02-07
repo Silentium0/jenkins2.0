@@ -94,6 +94,7 @@ public class DocuportBasePage {
         return actual;
     }
     public void clickOn (String input) {
+        BrowserUtils.justWait(2000);
         receivedDocsButton.click();
     }
     public void clickon (String input) {
