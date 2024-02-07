@@ -3,6 +3,7 @@ package com.loop.page;
 import com.loop.utilities.BrowserUtils;
 import com.loop.utilities.DocuportConstants;
 import com.loop.utilities.Driver;
+import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -62,6 +63,19 @@ public class DocuportBasePage {
     @FindBy(xpath = "//span[text()='Download']")
     public WebElement download;
 
+    @FindBy(xpath = "//div[text()='10']")
+    public WebElement defaultRow;
+    @FindBy(xpath = "//div[text()='5']")
+    public WebElement afterChange;
+
+    @FindBy(xpath = "//div[@class='v-input__icon v-input__icon--append']")
+    public WebElement dropDown;
+
+    @FindBy(xpath = "//div[@class='v-list-item__title']/span[text()='Users'] ")
+    public WebElement users;
+    @FindBy(xpath = "//span[text()='Leads']")
+    public WebElement leads;
+
     public void setCreateNewUser(Map<String,String> input){
         firstName.sendKeys(input.get("First name"), Keys.ENTER);
         lastName.sendKeys(input.get("Last Name"),Keys.ENTER);
@@ -74,6 +88,12 @@ public class DocuportBasePage {
         save.click();
 
 
+
+    }
+    public void chancheRowNum(Integer num){
+        dropDown.click();
+        Driver.getDriver().findElement(By.xpath("//div[@class='v-list-item__content']/div[text()='"+num+"']")).click();
+        BrowserUtils.justWait(2000);
 
     }
 
