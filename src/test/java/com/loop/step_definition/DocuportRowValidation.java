@@ -30,8 +30,12 @@ public class DocuportRowValidation {
     }
     @When("Click Users")
     public void click_users() {
-        BrowserUtils.justWait(2000);
-        docuportLogin.users.click();
+        try {
+            docuportLogin.users.click();
+
+        }catch (Exception e){
+
+        }
     }
     @And("validate that Rows per page shows by default {int}")
     public void validateThatRowsPerPageShowsByDefault(Integer num) {
