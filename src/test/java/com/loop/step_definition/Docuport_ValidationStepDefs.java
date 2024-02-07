@@ -4,6 +4,7 @@ import com.loop.page.DocuportLogin;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.openqa.selenium.ElementNotInteractableException;
 
 public class Docuport_ValidationStepDefs {
     DocuportLogin docuportLogin = new DocuportLogin();

@@ -53,7 +53,7 @@ public class DocuportBasePage {
     public WebElement receivedDocsButton;
     @FindBy(xpath ="//h1[@class='text-h6 font-weight-bold']" )
     public WebElement receivDocs;
-    @FindBy(xpath = "//span[text()='My uploads'] ")
+    @FindBy(xpath = "//div[@class='v-list-item__title']/span[text()='My uploads']")
     public WebElement myUploadsButton;
     @FindBy(xpath = "//h1[@class='text-h6 font-weight-bold']")
     public WebElement myUpload;
@@ -94,6 +94,7 @@ public class DocuportBasePage {
         return actual;
     }
     public void clickOn (String input) {
+        BrowserUtils.justWait(2000);
         receivedDocsButton.click();
     }
     public void clickon (String input) {
