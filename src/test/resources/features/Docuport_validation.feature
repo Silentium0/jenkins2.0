@@ -13,3 +13,4 @@ Feature: Docuport validation
       | advisor    |
       | supervisor |
       | employee   |
+      | client     |

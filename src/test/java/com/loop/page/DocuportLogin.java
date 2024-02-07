@@ -36,6 +36,9 @@ public class DocuportLogin extends DocuportBasePage  {
             case "advisor":
                 username = ConfigurationReader.getProperty("advisor_username");
                 password = ConfigurationReader.getProperty("advisor_password");
+                emailBox.sendKeys(username);
+                passwordBox.sendKeys(password);
+                loginButton.click();
 
                 break;
 
@@ -47,19 +50,32 @@ public class DocuportLogin extends DocuportBasePage  {
                 loginButton.click();
                 BrowserUtils.justWait(2000);
                 continueBunnton.click();
-                logout.click();
+                BrowserUtils.justWait(1000);
+                break;
             case "Escobar":
                 username = ConfigurationReader.getProperty("hulio_username");
                 password = ConfigurationReader.getProperty("hulio_password");
+                emailBox.sendKeys(username);
+                passwordBox.sendKeys(password);
+                loginButton.click();
+
                 break;
             case "supervisor":
                 username = ConfigurationReader.getProperty("supervisor_username");
                 password = ConfigurationReader.getProperty("supervisor_password");
+                emailBox.sendKeys(username);
+                passwordBox.sendKeys(password);
+                loginButton.click();
+
 
                 break;
             case "employee":
                 username = ConfigurationReader.getProperty("employee_username");
                 password = ConfigurationReader.getProperty("employee_password");
+                emailBox.sendKeys(username);
+                passwordBox.sendKeys(password);
+                loginButton.click();
+
 
                 break;
                 default:
@@ -67,9 +83,6 @@ public class DocuportLogin extends DocuportBasePage  {
                 System.out.println("Invalid user role");
                 return;
         }
-        emailBox.sendKeys(username);
-        passwordBox.sendKeys(password);
-        loginButton.click();
 
 
     }
@@ -83,13 +96,13 @@ public class DocuportLogin extends DocuportBasePage  {
 
     public void logOut(){
 
-        BrowserUtils.justWait(2000);
+       // BrowserUtils.justWait(2000);
         batch.click();
         logout.click();
     }
 
     public void logout(){
-        BrowserUtils.justWait(2000);
+        //BrowserUtils.justWait(2000);
         batch2.click();
         BrowserUtils.waitForVisibility(logout, DocuportConstants.LARGE);
         logout.click();
