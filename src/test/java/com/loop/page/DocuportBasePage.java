@@ -49,7 +49,7 @@ public class DocuportBasePage {
     public WebElement save;
 
 
-    @FindBy(xpath = "//span[text()='Received docs']")
+    @FindBy(xpath = "//div[@class='v-list-item__title']/span[text()='Received docs']")
     public WebElement receivedDocsButton;
     @FindBy(xpath ="//h1[@class='text-h6 font-weight-bold']" )
     public WebElement receivDocs;
