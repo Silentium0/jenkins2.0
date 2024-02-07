@@ -29,12 +29,7 @@ public class Docuport_ValidationStepDefs {
 
     @When("click {string}")
     public void click(String receiveDocs) {
-
-        try {
-            docuportLogin.clickOn(receiveDocs);
-        }catch (ElementNotInteractableException e){
-
-        }
+        docuportLogin.clickOn(receiveDocs);
     }
 
     @Then("Validate My uploads, download button, search button is displayed")
