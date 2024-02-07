@@ -30,12 +30,9 @@ public class DocuportRowValidation {
     }
     @When("Click Users")
     public void click_users() {
-        try {
-            docuportLogin.users.click();
+        docuportLogin.users.click();
 
-        }catch (Exception e){
 
-        }
     }
     @And("validate that Rows per page shows by default {int}")
     public void validateThatRowsPerPageShowsByDefault(Integer num) {
