@@ -50,13 +50,11 @@ public class DocuportBasePage {
 
 
     @FindBy(xpath = "//div[@class='v-list-item__title']/span[text()='Received docs']")
-    public WebElement receivedDocsButton;
-    @FindBy(xpath ="//h1[text()='Received docs']" )
     public WebElement receivDocs;
+
     @FindBy(xpath = "//div[@class='v-list-item__title']/span[text()='My uploads']")
-    public WebElement myUploadsButton;
-    @FindBy(xpath = "//h1[@class='text-h6 font-weight-bold']")
     public WebElement myUpload;
+
 
     @FindBy(xpath ="//span[text()='Search']" )
     public WebElement search;
@@ -105,10 +103,10 @@ public class DocuportBasePage {
 
         switch (button){
             case "My uploads":
-                myUploadsButton.click();
+                myUpload.click();
                 break;
             case "Received docs":
-                receivedDocsButton.click();
+                receivDocs.click();
                 break;
         }
     }
