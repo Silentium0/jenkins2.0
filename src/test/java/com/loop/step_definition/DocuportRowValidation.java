@@ -1,6 +1,7 @@
 package com.loop.step_definition;
 
 import com.loop.page.DocuportLogin;
+import com.loop.utilities.BrowserUtils;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
@@ -29,6 +30,7 @@ public class DocuportRowValidation {
     }
     @When("Click Users")
     public void click_users() {
+        BrowserUtils.justWait(2000);
         docuportLogin.users.click();
     }
     @And("validate that Rows per page shows by default {int}")
