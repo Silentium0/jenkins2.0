@@ -97,10 +97,10 @@ public class DocuportBasePage {
 
         switch (button){
             case "My uploads":
-                BrowserUtils.waitForClickable(myUpload,DocuportConstants.LARGE).click();
+              myUpload.isDisplayed();
                 break;
             case "Received docs":
-                BrowserUtils.waitForClickable(receivDocs,DocuportConstants.LARGE).click();
+                receivDocs.isDisplayed();
                 break;
         }
     }
@@ -109,10 +109,10 @@ public class DocuportBasePage {
 
         switch (button){
             case "My uploads":
-                myUpload.click();
+                BrowserUtils.waitForClickable(myUpload,DocuportConstants.LARGE).click();
                 break;
             case "Received docs":
-                receivDocs.click();
+                BrowserUtils.waitForClickable(receivDocs,DocuportConstants.LARGE).click();
                 break;
         }
     }
