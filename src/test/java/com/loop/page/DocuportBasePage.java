@@ -97,10 +97,10 @@ public class DocuportBasePage {
 
         switch (button){
             case "My uploads":
-                myUpload.isDisplayed();
+                BrowserUtils.waitForClickable(myUpload,DocuportConstants.LARGE).click();
                 break;
             case "Received docs":
-                receivDocs.isDisplayed();
+                BrowserUtils.waitForClickable(receivDocs,DocuportConstants.LARGE).click();
                 break;
         }
     }
