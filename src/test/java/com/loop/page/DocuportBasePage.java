@@ -94,11 +94,10 @@ public class DocuportBasePage {
         return actual;
     }
     public void clickOn (String input) {
-        BrowserUtils.justWait(2000);
-        receivedDocsButton.click();
+        BrowserUtils.waitForClickable(receivedDocsButton,DocuportConstants.LARGE).click();
     }
     public void clickon (String input) {
-        myUploadsButton.click();
+        BrowserUtils.waitForClickable(myUploadsButton,DocuportConstants.LARGE).click();
     }
 
 
