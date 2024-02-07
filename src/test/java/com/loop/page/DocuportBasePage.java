@@ -51,7 +51,7 @@ public class DocuportBasePage {
 
     @FindBy(xpath = "//div[@class='v-list-item__title']/span[text()='Received docs']")
     public WebElement receivedDocsButton;
-    @FindBy(xpath ="//h1[@class='text-h6 font-weight-bold']" )
+    @FindBy(xpath ="//h1[text()='Received docs']" )
     public WebElement receivDocs;
     @FindBy(xpath = "//div[@class='v-list-item__title']/span[text()='My uploads']")
     public WebElement myUploadsButton;
@@ -93,11 +93,24 @@ public class DocuportBasePage {
         }
         return actual;
     }
-    public void clickOn (String input) {
-        BrowserUtils.waitForClickable(receivedDocsButton,DocuportConstants.LARGE).click();
+
+    public void MyUpload(String input){
+        myUpload.isDisplayed();
     }
-    public void clickon (String input) {
-        BrowserUtils.waitForClickable(myUploadsButton,DocuportConstants.LARGE).click();
+    public void ReceviedDocs(String input){
+        receivDocs.isDisplayed();
+    }
+
+    public void clickButton(String button){
+
+        switch (button){
+            case "My uploads":
+                myUploadsButton.click();
+                break;
+            case "Received docs":
+                receivedDocsButton.click();
+                break;
+        }
     }
 
 

@@ -10,33 +10,30 @@ public class Docuport_ValidationStepDefs {
     DocuportLogin docuportLogin = new DocuportLogin();
 
     @Given("login as {string}")
-    public void login_as(String User) {
-        docuportLogin.login(User);
+    public void login_as(String user) {
+        docuportLogin.login(user);
     }
-
     @When("click on {string}")
-    public void click_on(String myuploads) {
-        docuportLogin.clickon(myuploads);
+    public void click_on(String button) {
+        docuportLogin.clickButton(button);
     }
-    @Then("Validate Received docs ,search button, download button  is displayed")
-    public void validate_received_docs_search_button_download_button_is_displayed() {
-        docuportLogin.receivDocs.isDisplayed();
+    @Then("Validate {string},search button, download button  is displayed")
+    public void validate_search_button_download_button_is_displayed(String string) {
+        docuportLogin.MyUpload(string);
         docuportLogin.search.isDisplayed();
         docuportLogin.download.isDisplayed();
     }
-    @When("click {string}")
-    public void click(String receiveDocs) {
-        docuportLogin.clickOn(receiveDocs);
-    }
-    @Then("Validate My uploads, download button, search button is displayed")
-    public void validate_my_uploads_download_button_search_button_is_displayed() {
-        docuportLogin.myUpload.isDisplayed();
-        docuportLogin.search.isDisplayed();
+    @Then("Validate {string}, download button, search button is displayed")
+    public void validate_download_button_search_button_is_displayed(String string) {
+        docuportLogin.ReceviedDocs(string);
         docuportLogin.download.isDisplayed();
+        docuportLogin.search.isDisplayed();
     }
     @Then("LogOut")
     public void log_out() {
         docuportLogin.logOut();
+
     }
+
 
 }
