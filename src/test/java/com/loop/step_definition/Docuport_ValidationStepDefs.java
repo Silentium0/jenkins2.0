@@ -17,21 +17,17 @@ public class Docuport_ValidationStepDefs {
     @When("click on {string}")
     public void click_on(String myuploads) {
         docuportLogin.clickon(myuploads);
-
     }
-
     @Then("Validate Received docs ,search button, download button  is displayed")
     public void validate_received_docs_search_button_download_button_is_displayed() {
         docuportLogin.receivDocs.isDisplayed();
         docuportLogin.search.isDisplayed();
         docuportLogin.download.isDisplayed();
     }
-
     @When("click {string}")
     public void click(String receiveDocs) {
         docuportLogin.clickOn(receiveDocs);
     }
-
     @Then("Validate My uploads, download button, search button is displayed")
     public void validate_my_uploads_download_button_search_button_is_displayed() {
         docuportLogin.myUpload.isDisplayed();
@@ -41,7 +37,6 @@ public class Docuport_ValidationStepDefs {
     @Then("LogOut")
     public void log_out() {
         docuportLogin.logOut();
-
     }
 
 }
