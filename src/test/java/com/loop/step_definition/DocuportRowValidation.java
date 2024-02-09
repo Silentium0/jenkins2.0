@@ -1,11 +1,12 @@
 package com.loop.step_definition;
 
 import com.loop.page.DocuportLogin;
-import com.loop.utilities.BrowserUtils;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
+import utilities.BrowserUtils;
+import utilities.DocuportConstants;
 
 public class DocuportRowValidation {
 
@@ -17,7 +18,7 @@ public class DocuportRowValidation {
     }
     @When("Click leads")
     public void click_leads() {
-        docuportLogin.leads.click();
+        BrowserUtils.waitForVisibility(docuportLogin.leads, DocuportConstants.EXTRALARGE).click();
     }
     @When("Validate that Rows per page shows by default {int}")
     public void validate_that_rows_per_page_shows_by_default(Integer num) {
@@ -30,7 +31,8 @@ public class DocuportRowValidation {
     }
     @When("Click Users")
     public void click_users() {
-        docuportLogin.users.click();
+        BrowserUtils.waitForVisibility(docuportLogin.users, DocuportConstants.EXTRALARGE).click();
+        //docuportLogin.users.click();
 
 
     }
