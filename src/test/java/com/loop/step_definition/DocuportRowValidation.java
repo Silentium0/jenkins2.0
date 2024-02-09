@@ -19,7 +19,6 @@ public class DocuportRowValidation {
     @When("Click leads")
     public void click_leads() {
         //BrowserUtils.waitForVisibility(docuportLogin.leads, 5).click();
-        BrowserUtils.justWait(3000);
         docuportLogin.leads.click();
         BrowserUtils.justWait(3000);
 
@@ -36,8 +35,6 @@ public class DocuportRowValidation {
     @When("Click Users")
     public void click_users() {
         //BrowserUtils.waitForVisibility(docuportLogin.users, 5).click();
-        BrowserUtils.justWait(3000);
-
         docuportLogin.users.click();
         BrowserUtils.justWait(3000);
 
