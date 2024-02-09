@@ -1,6 +1,5 @@
 Feature: Docuport validation
 
-  @DucuportValidation
   Scenario Outline: validate items
     Given login as "<User type>"
     When click on "My uploads"
