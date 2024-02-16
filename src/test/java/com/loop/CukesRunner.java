@@ -12,7 +12,7 @@ import org.junit.runner.RunWith;
                 "junit:target/junit/junit-report.xml",
                 "rerun:target/rerun.txt",},
         features = "src/test/resources/features",
-        publish = false,
+        publish = false, // run our project
         tags = "@DocuportRow"
 )
 public class CukesRunner {}
