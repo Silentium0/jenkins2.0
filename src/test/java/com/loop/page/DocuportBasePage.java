@@ -74,7 +74,7 @@ public class DocuportBasePage {
     @FindBy(xpath = "//div[@class='v-list-item__title']/span[text()='Users'] ")
     public WebElement users;
     @FindBy(xpath = "//span[text()='Leads']")
-    public WebElement Leads;
+    public WebElement leads;
 
     public void setCreateNewUser(Map<String,String> input){
         firstName.sendKeys(input.get("First name"), Keys.ENTER);

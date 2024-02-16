@@ -18,7 +18,7 @@ public class DocuportRowValidation {
     }
     @When("Click leads")
     public void click_leads() {
-        docuportLogin.Leads.click();
+        docuportLogin.leads.click();
 
     }
     @When("Validate that Rows per page shows by default {int}")
