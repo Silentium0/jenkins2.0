@@ -13,7 +13,6 @@ public class DocuportWebTablesUtils {
      * @param driver
      * @param emailAddress
      * @param field
-     * @author sergii
      *
      */
 
