@@ -17,8 +17,7 @@ public class Wikipedia_Locators {
     @FindBy(xpath = "//h1/span")
     public WebElement header;
 
-    @FindBy (xpath = "//div[@class='fn']")
-       public WebElement SteveImage;
+
     public Wikipedia_Locators(){
         PageFactory.initElements(Driver.getDriver(),this);
     }
