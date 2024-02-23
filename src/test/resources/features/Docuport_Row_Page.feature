@@ -1,5 +1,4 @@
 Feature: Row validation
-  @DocuportRow
   Scenario: Docuport Row Validation
     Given user login as "advisor"
     When Click leads
