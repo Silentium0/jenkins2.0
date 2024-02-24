@@ -20,8 +20,7 @@ public class DocuportRowValidation {
     @When("Click leads")
     public void click_leads() {
         BrowserUtils.justWait(5000);
-
-        docuportLogin.leads.click();
+        BrowserUtils.waitForVisibility(docuportLogin.leads,20).click();
 
     }
     @When("Validate that Rows per page shows by default {int}")
@@ -40,8 +39,7 @@ public class DocuportRowValidation {
     @When("Click Users")
     public void click_users() {
         BrowserUtils.justWait(5000);
-
-        docuportLogin.users.click();
+         BrowserUtils.waitForVisibility(docuportLogin.users,20).click();
 
 
 

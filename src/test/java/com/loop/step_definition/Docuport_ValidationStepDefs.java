@@ -34,7 +34,6 @@ public class Docuport_ValidationStepDefs {
     }
     @Then("LogOut")
     public void log_out() {
-        BrowserUtils.justWait(5000);
 
         docuportLogin.logOut();
     }
