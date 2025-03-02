@@ -1,5 +1,5 @@
 Feature: Row validation
-  @smoke
+  @smoke @regression
   Scenario: Docuport Row Validation
     Given user login as "advisor"
     When Click leads
