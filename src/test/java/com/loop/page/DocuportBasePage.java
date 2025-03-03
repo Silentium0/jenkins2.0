@@ -93,7 +93,6 @@ public class DocuportBasePage {
     public void chancheRowNum(Integer num){
         dropDown.click();
         Driver.getDriver().findElement(By.xpath("//div[@class='v-list-item__content']/div[text()='"+num+"']")).click();
-        BrowserUtils.justWait(2000);
 
     }
 
