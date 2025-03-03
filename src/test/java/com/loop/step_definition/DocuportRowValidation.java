@@ -20,8 +20,7 @@ public class DocuportRowValidation {
     @When("Click leads")
     public void click_leads() {
         BrowserUtils.justWait(3000);
-        //docuportLogin.leads.click();
-        BrowserUtils.waitForVisibility(docuportLogin.leads, 10).click();
+        docuportLogin.leads.click();
 
     }
     @When("Validate that Rows per page shows by default {int}")
@@ -37,16 +36,15 @@ public class DocuportRowValidation {
     }
     @When("Click Users")
     public void click_users() {
-        //BrowserUtils.justWait(3000);
-        //docuportLogin.users.click();
-        BrowserUtils.waitForVisibility(docuportLogin.users, 10).click();
+        BrowserUtils.justWait(3000);
+        docuportLogin.users.click();
 
 
 
     }
     @And("validate that Rows per page shows by default {int}")
     public void validateThatRowsPerPageShowsByDefault(Integer num) {
-        //BrowserUtils.justWait(5000);
+        BrowserUtils.justWait(3000);
 
         Integer actualNum = Integer.parseInt(docuportLogin.defaultRow.getText());
         Assert.assertEquals(num, actualNum);
