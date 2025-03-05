@@ -22,6 +22,40 @@ public class DocWebElem {
     @FindBy(xpath = "//span[contains(text(),'Home')]")
     public WebElement Home;
 
+    @FindBy(xpath = "//label[contains(text(),'Create new user')]/../div/div")
+    public WebElement checkbox;
+
+    @FindBy(xpath = "//label[contains(text(),'First name')]/../input")
+    public WebElement firstName;
+
+    @FindBy(xpath = "//label[contains(text(),'Last name')]/../input")
+    public WebElement lastName;
+
+    @FindBy(xpath = "//label[contains(text(),'Email address')]/../input")
+    public WebElement email;
+
+    @FindBy(xpath = "//label[contains(text(),'Phone number')]/../input")
+    public WebElement  phoneNumber;
+
+    @FindBy(xpath = "//label[contains(text(),'Password')]/../input")
+    public WebElement passwords;
+
+    @FindBy(xpath = "//label[contains(text(),'Confirm password')]/../input")
+    public WebElement conformPassword;
+
+    @FindBy(xpath = "//label[contains(text(),'Advisor')]/../div")
+    public WebElement drop;
+
+    @FindBy(xpath = "//div[contains(text(),'Batch1 Group3')]")
+    public WebElement batch1Group3;
+
+
+
+
+
+
+
+
 
 
     public DocWebElem() {

@@ -74,5 +74,9 @@ public class DocuportUtils {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
     }
 
+    public static  void justClick(String name){
+        Driver.getDriver().findElement(By.xpath("//*[contains(text(),'"+name+"')]")).click();
+    }
+
 
 }

@@ -3,16 +3,20 @@ package com.loop.step_definition;
 import com.loop.page.DocWebElem;
 import com.loop.utilities.BrowserUtils;
 import com.loop.utilities.ConfigurationReader;
+import com.loop.utilities.DocuportUtils;
 import com.loop.utilities.Driver;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import org.junit.Assert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.ElementClickInterceptedException;
 import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebElement;
 
 import java.util.Arrays;
+import java.util.InputMismatchException;
 import java.util.List;
+import java.util.Map;
 
 public class Validation_StepDef {
     DocWebElem home = new DocWebElem();
@@ -44,7 +48,7 @@ public class Validation_StepDef {
                 try {
                     BrowserUtils.waitForClickable(home.continueButton, 10);
                     home.continueButton.click();
-                }catch (Exception e) {
+                } catch (Exception e) {
                     e.printStackTrace();
                 }
                 break;
@@ -69,4 +73,57 @@ public class Validation_StepDef {
             }
         }
     }
+
+    @Then("user click {string}")
+    public void userClick(String data) throws InterruptedException {
+        DocuportUtils.justClick(data);
+    }
+
+    @Then("user click checkbox")
+    public void userClickCheckbox() {
+        try {
+            BrowserUtils.waitForVisibility(home.checkbox, 10).click();
+        }catch (ElementClickInterceptedException e){
+            BrowserUtils.waitForVisibility(home.checkbox, 10).click();
+
+        }
+    }
+
+    @Then("create new client")
+    public void createNewClient(Map<String, String> input) {
+        for (Map.Entry<String, String> entry : input.entrySet()) {
+            String key = entry.getKey();
+            String value = entry.getValue();
+
+            switch (key) {
+                case "First Name":
+                    home.firstName.sendKeys(value);
+                    break;
+                case "Last Name":
+                    home.lastName.sendKeys(value);
+                    break;
+                case "Phone":
+                    home.phoneNumber.sendKeys(value);
+                case "Email":
+                    home.email.sendKeys(value);
+                    break;
+                case "Password":
+                    home.password.sendKeys(value);
+                    break;
+                case "Confirm password":
+                    home.conformPassword.sendKeys(value);
+                    break;
+                    case "Advisor":
+                        home.drop.click();
+                        home.batch1Group3.click();
+                        break;
+                default:
+                    throw new InputMismatchException("Invalid input: " + key);
+            }
+
+        }
+
+    }
+
+
 }
