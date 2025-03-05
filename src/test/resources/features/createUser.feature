@@ -11,7 +11,7 @@ Feature: create user
     Then create new client
       | First Name       | Mike           |
       | Last Name        | Smith          |
-      | Email            | Mike@gmail.com |
+      | Email            | Mike01@gmail.com |
       | Phone            | 123456543      |
       | Password         | Mike12345      |
       | Confirm password | Mike12345      |
